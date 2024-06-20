@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EL MÓN DELS ANIMALS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<style>
+    /*això donará color, a l'etiqueta body*/
+    body {
+        background-color: yellow;
+    }
+    /*posará color, i una font de lletra als atributs class, que tingui el nom de titol1*/
+    .titol1 {
+        text-align: center;
+        color:rgb(30, 0, 255);
+        font-family: 'Russo One', sans-serif;
+        background-color: aqua;
+    }
+    /*posará color, i una font de lletra als atributs class, que tingui el nom de titol2*/
+    .titol2 {
+        text-align: center;
+        color: green;
+        font-family: 'Russo One', sans-serif;
+        background-color: greenyellow;
+    }
+    /*tota etiqueta ul tindrá aquestes normes d'css*/
+    ul {
+        list-style-type: none;
+        padding: 0px 0px;
+        overflow: hidden;
+        background-color: #333;
+        width: 100%;
+    }
+    /*les etiquetes li estarán en aquest format*/
+    li {
+        float: left;
+    }
+    /*etiquetes a, i noms de class que contingui en nom format1, tenen aquestes regles*/
+    li a, .format1 {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    /*l'etiqueta a, tindrá efecte d'un canvi del ratolí, el mateix pasará amb el class llista i format1*/
+    li a:hover, .llista:hover .format1 {
+        background-color: white;
+        color: black;
+    }
+    /*tota etiqueta li, amb class llista tindrá aquest efecte*/
+    li .llista {
+        display: inline-block;
+    }
+    /*tot atribut class, de nom contingut-llista, tindrá aquesta posició*/
+    .contingut-llista {
+        display: none;
+        position: absolute;
+    }
+    /*atributs que contingui l'etiqueta contingut-llista, i dins estigui l'etiqueta a, tindrá aquesta normativa*/
+    .contingut-llista a {
+        background-color: white;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    /*atributs de class amb nom de llista tindrán aquest canvi de format en el seu ratolí, incloguent contingut-llista*/
+    .llista:hover .contingut-llista {
+        display: block;
+    }
+    li a:hover:not(.actiu) {
+        background-color: #808080;
+    }
+    /*tot atribut class que contingui el nom actiu, tindrá aquest format de text*/
+    .actiu {
+        background-color: #808080;
+        font-weight: bold;
+    }
+    /*el valor div1, tindrá aquestes caracteristiques*/
+    .div1 {
+        float: left;
+        position: relative;
+        text-align: center;
+        border: hidden;
+        width: 990px;
+        height: 400px;
+    }
+    /*el text estará en posició dreta*/
+    .text1 {
+        float: right;
+    }
+    /*l'atribut class, amb el valor de span1, tindrá un format diferent, per posar el text en mig, tant horizontal, com vertical*/
+    .span1{
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: bold;
+        font-size: larger;
+        animation-duration: 5s;
+        animation-name:initial;
+    }
+    /*en aquest cas, hi haurá un nou div, però amb format diferent*/
+    .div2 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        border: hidden;
+        width: 500px;
+        height: 400px;
+        margin: 1px auto;
+    }
+    /*es posará aquestos valors, perqué estigui en el format correcte*/
+    .img1 {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*les imatges, dins d'un div, tindrán aquest valor, per reglament*/
+    .divimg1 {
+        float: left;
+        position: relative;
+        text-align: center;
+        border: hidden;
+        width: 720px;
+        height: 400px;
+    }
+    /*aquesta etiqueta fará el mateix que la divimg1, pero amb uns valor cambiats, perquè es pugui centrar, i tenir un format correcte*/
+    .divimg2 {
+        display: flex;
+        float: right;
+        position: relative;
+        text-align: center;
+        border: hidden;
+        width: 730px;
+        height: 400px;
+        margin: 1px auto;
+    }
+</style>
+</head>
+<body>
+    <!--aquesta etiqueta ul, serveix per crear una taula, en aquest fará una fila-->
+    <ul>
+        <!--l'etiqueta h1, es de títol, més l'atribut class, fará el seu disseny conforme s'ha ordenat en el css-->
+        <h1 class="titol1">EL MÓN DELS ANIMALS</h1>
+        <!--en aquest cas l'etiqueta li, fará columnes, amb l'atribur class, de nom actiu, fará que sempre es mantengui aquesta pestanya d'un color diferent-->
+        <li><a class="actiu">INICI</a></li>
+        <!--etiquetes li, amb class llista, tindrán el format possat abans-->
+        <li class="llista">
+        <!--en aquest cas etiqueta a, amb atribut class, de nom format1, tindrán una normativa diferents als altres-->
+        <a href="javascript:void(0)" class="format1">MAMÍFERS</a>
+        <!--com es va dir anteriorment, tot atribut class, depenent del nombre, pot tenir una configuració o altra, depenent de la seva utilitat en el css-->
+        <div class="contingut-llista">
+            <!--l'etiqueta serveix per posar link, sempre i quan tingui l'atribut href-->
+            <a href="mamifers.html">Informació dels mamífers</a>
+            <a target="_blank" hfref="https://www.youtube.com/watch?v=wMRxKiNsI1E">Documental dels mamífers</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Mammals">Viquipèdia dels mamífers</a>
+
+        <li class="llista">
+        <a href="javascript:void(0)" class="format1">OCELLS</a>
+        <div class="contingut-llista">
+            <a href="ocells.html">Informació dels ocells</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=4XuARsc8o4k">Documental dels ocells</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Birds">Viquipèdia dels ocells</a>
+              
+        <li class="llista">
+        <a href="javascript:void(0)" class="format1">ROSEGADORS</a>
+        <div class="contingut-llista">
+            <a href="rosegadors.html">Informació dels rosegadors</a>
+            <a target="_blank" href="https://www.rtve.es/play/videos/el-hombre-y-la-tierra/roedores-1/5784923/">Documental dels rosegadors</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Rodents">Viquipèdia dels rosegadors</a>
+      
+        <li class="llista">
+        <a href="javascript:void(0)" class="format1">PEIXOS</a>
+        <div class="contingut-llista">
+            <a href="peixos.html">Informació dels peixos</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=sfWqabJ-bcE">Documental dels peixos</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/fish">Viquipèdia dels peixos</a>
+
+        <li class="llista">
+        <a href="javascript:void(0)" class="format1">AMFIBIS</a>
+        <div class="contingut-llista">
+            <a href="amfibis.html">Informació dels amfibis</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=cCn-WQQbzW4">Documental dels amfibis</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Amphibians">Viquipèdia dels amfibis</a>
+        
+        <li class="llista">
+        <a href="javascript:void(0)" class="format1">RÈPTILS</a>
+        <div class="contingut-llista">
+            <a href="rèptils.html">Informació dels rèptils</a>
+            <a target="_blank" href="https://www.youtube.com/watch?v=WRDed_kOvFI">Documental dels rèptils</a>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Reptile">Viquipèdia dels rèptils</a>
+            </div>
+        </li>
+    </ul>
+    <!--aquí es fará una diferencia d'espais, perquè pugui entrar la llista-->
+    <br><br><br><br><br><br>
+    <!--aquest div, tindrá el valor css del div1-->
+    <div class="div1">
+        <!--com es va dir abans, vaig configurar l'span1 perquè es pugui entrar el text-->
+        <span class="span1">
+    En aquesta página web podrás trobar informació del món animal, pots buscar qualsevol que vulguis.<br>
+    Trobarás informació, com la seva alimentació, documentals i més informacio de la Viquipèdia.<br>
+    Les espècies seleccionades en aquesta pàgina web són els mamífers, ocells, rosegadors, peixos, amfibis i rèptils.
+        </span>
+    </div>
+
+    <div class="div2">
+    <p class="text1">
+        <img src="animals.png" alt="animals" width="220" height="370">
+        <br>IMATGE DE:
+        <a href="https://es.wikipedia.org/wiki/Animalia">Viquipèdia "Animalia"</a>
+    </p>
+    </div>
+    <br><hr>
+
+    <h2 class="titol2">RESUM</h2>
+
+    <div class="divimg1">
+    <p>
+        <img src="mamíferos.jpg" alt="mamíferos" width="390" height="300">
+        <br>IMATGE DE MAMÍFERS
+    </p>
+    </div>
+
+    <div class="divimg2">
+        <p class="text1">
+            <img src="aves.jpg" alt="ocells" width="450" height="300">
+            <br>IMATGE D'OCELLS
+        </p>
+    </div>
+
+    <div class="divimg1">
+        <img src="roedores.png" alt="rosegadors" width="400" height="300">
+        <p>
+            IMATGE DE ROSEGADORS
+        </p>
+    </div>
+
+    <div class="divimg2">
+        <p class="text1">
+            <img src="peces.jpg" alt="peixos" width="425" height="300">
+            <br>IMATGE DE PEIXOS
+        </p>
+    </div>
+
+    <div class="divimg1">
+        <img src="anfibios.jpg" alt="amfibis" width="425" height="300">
+        <p>
+            IMATGE D'AMFIBIS
+        </p>
+    </div>
+
+    <div class="divimg2">
+        <p>
+        <img class="text1" src="reptiles.jpg" alt="reptils" width="450" height="300">
+            <br>IMATGE DE RÈPTILS
+        </p>
+    </div>
+</body>
+</html>
